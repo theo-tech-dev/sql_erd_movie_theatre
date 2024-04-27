@@ -1,0 +1,59 @@
+CREATE TABLE Movies (
+	movie_id SERIAL PRIMARY KEY,
+	movie_title VARCHAR(255)
+	genre VARCHAR (50)
+	director VARCHAR(5)
+	release_date DATE,
+	duration INTEGER
+
+);
+
+--Create index
+CREATE INDEX indx_movies_title ON Movie (title);
+
+
+CREATE TABLE Customers (
+	customer_id SERIAL PPRIMARY KEY
+	name VARCHAR(100)
+	contact information VARCHAR
+	membership_id NUMERIC
+	membership_status VARCHAR
+	membership_history DATE
+	preferences VARCHAR
+	purchase_history VARCHAR
+	demo_info VARCHAR
+	communications VARCHAR
+	privacy BOOLEAN
+	
+);
+
+--Create index
+CREATE INDEX indx_customers_email ON Customers(email);
+
+CREATE TABLE Concessions Purchase
+	product_id INTEGER
+	product_name VARCHAR
+	category VARCHAR
+	inventory_level VARCHAR
+	supplier_id INTEGER
+	expiration_date DATE
+	promotion VARCHAR
+	sales_history REFERENCE
+	allergens TEXT
+	seasonal CHAR(1)
+
+);
+
+--Create indexes
+CREATE indx_product_id ON allergens(title);
+
+	
+CREATE TABLE Tickets(
+	ticket_id NUMERIC
+	movie_time TIME
+	movie_title REFERENCE
+	status TEXT
+	showing_id reference
+	movie_time TIME
+	
+);
